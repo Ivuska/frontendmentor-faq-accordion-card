@@ -1,0 +1,137 @@
+//Colors
+$headingColor: hsl(238, 29%, 16%);
+$textColor: hsl(237, 12%, 33%);
+$accordionColor: hsl(240, 5%, 91%);
+$dividerColor: hsl(240, 6%, 50%);
+$activeStatesColor: hsl(14, 88%, 65%);
+$bodyColor: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+
+//Fonts
+$base-font-size: 0.75rem;
+$font-primary: 'Kumbh Sans', sans-serif;
+$weight-normal: 400;
+$weight-bold: 700;
+
+//Radius
+$radius: 1rem;
+
+/* global styles */
+html {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: $bodyColor;
+  font-family: $font-primary;
+  color: $textColor;
+  font-weight: $weight-normal;
+  line-height: 1.5;
+  font-size: $base-font-size; 
+}
+
+h1 {
+  color:$headingColor;
+  font-weight: $weight-bold;
+  font-size: $base-font-size*2.5;
+  text-align:center;
+  margin: 5rem 0 1rem 0;
+}
+
+/*layout*/
+
+.isResponsive {
+  display: flex;
+  flex-shrink: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.accordionWrapper {
+  max-width: 370px;
+  width:100%;
+  padding: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion {
+  flex-direction: column;
+  text-align: left;
+  background-color: $accordionColor;
+  border-radius: $radius;
+  max-width: 370px;
+  width: 100%;
+  padding: 2rem 2rem 3rem 2rem;
+  hr {
+    width: 100%;
+    margin: 0;
+    border: 0.5px solid $dividerColor;
+  }
+}
+
+.illustration {
+  max-width: 240px;
+  width:100%;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(45%);
+  .illustrationWoman {
+    display: block;
+    width: 100%;
+  }
+  .shadowForIllustration {
+    display: block;
+    width: 100%;
+    margin-top: -5rem;
+  }
+}
+
+.accordionItem {
+  position: relative;
+  .label {
+    font-size: $base-font-size*1.1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    img{
+      display: block;
+      width: 10px;
+      height:10px;
+    }
+    &:hover ,
+    &:focus-visible{
+    color: $activeStatesColor;
+  }
+}
+  .content {
+    position: relative;
+    height: 0;
+    margin: 0;
+    text-align: justify;
+    overflow: hidden;
+    transition: 0.1s;
+  }
+  &.active .label p{
+    color: $headingColor;
+    font-weight: $weight-bold;
+  }
+  &.active .label img {
+    transform: rotate(180deg);
+  }
+  &.active .content {
+    height: auto;
+    padding-bottom: 0.5rem;
+  }
+}
