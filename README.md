@@ -39,11 +39,13 @@ Users should be able to:
 - SASS
 - Flexbox
 - Mobile-first workflow
+- a bit of JavaScript
 
 ### What I learned
 I did not even know what accordion is :-D 
 I tried to use SASS in my coding for the very first time.
-I really struggled (and was definitely not completely successful) with positioning of the images. 
+My first challenge with JavaScript.
+I really struggled (and was definitely not completely successful) with positioning of the images.
 
 ### Useful resources
 
