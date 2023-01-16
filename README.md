@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution on GitHub](https://github.com/Ivuska/frontendmentor-faq-accordion-card)
-- Live Site URL: [Live accordion](https://ivuska.github.io/frontendmentor-faq-accordion-card/)
+- Live Site URL: [Live accordion](https://ifischerova.github.io/frontendmentor-faq-accordion-card/)
 
 ## My process
 
